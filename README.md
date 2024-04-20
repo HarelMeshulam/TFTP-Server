@@ -6,28 +6,32 @@ This project implements an extended version of the Trivial File Transfer Protoco
 - Thread-Per-Client (TPC) server architecture. <br />
 - Support for login, file upload, download, delete, and directory listing. <br />
 - Bidirectional message passing between clients. <br />
-- Broadcasting announcements to all connected clients. <br />
-- Error handling for various scenarios. <br />
+* Broadcasting announcements to all connected clients. <br />
+* Error handling for various scenarios. <br />
 
 <h2 align="left">Project Structure</h2>
-Server: Contains the implementation of the TFTP server.
-Client: Contains the implementation of the TFTP client.
-Common: Contains common utilities and classes shared between the server and client, including the TFTP encoder/decoder.
-Examples: Provides examples of how to use the server and client.
-Getting Started
-Prerequisites
+Server: Contains the implementation of the TFTP server. <br />
+Client: Contains the implementation of the TFTP client. <br />
+Common: Contains common utilities and classes shared between the server and client, including the TFTP encoder/decoder. <br />
+Examples: Provides examples of how to use the server and client. <br />
+
+<h2 align="left">Getting Started</h2>
+<h3 align="left">Prerequisites</h3>
+
 Java JDK (11 or higher)
 Maven
-Building the Project
-Clone this repository.
-Navigate to the root directory of the project.
-Run mvn compile to compile the project.
-Running the Server
-Navigate to the server directory.
-Execute the following command:
-bash
-Copy code
+
+<h3 align="left">Building the Project</h3>
+1. Clone this repository. <br />
+2. Navigate to the root directory of the project. <br />
+3. Run mvn compile to compile the project. <br />
+
+<h3 align="left">Running the Server</h3>
+1. Navigate to the server directory. <br />
+2. Execute the following command: <br />
+```
 mvn exec:java -Dexec.mainClass="bgu.spl.net.impl.tftp.TftpServer" -Dexec.args="<port>"
+```
 Replace <port> with the desired port number for the server.
 Running the Client
 Navigate to the client directory.
