@@ -172,7 +172,7 @@ public class TftpProtocol implements BidiMessagingProtocol<byte[]> {
             short packetNum = (short)(((short) message[2]) << 8 | (short)(message[3]) & 0x00ff);
             System.out.println("Recived ACK packet with block number " + packetNum);
             packetNum++;
-            if (isThereMoreToSend(fileToSend, packetNum)&fileToSend.length%512==0) {
+            if (isThereMoreToSend(fileToSend, packetNum)) {
                 connections.send(connectionId, startSending(fileToSend, packetNum));
             }
         }
