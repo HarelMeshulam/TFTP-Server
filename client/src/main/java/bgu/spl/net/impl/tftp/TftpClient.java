@@ -144,6 +144,7 @@ public class TftpClient {
                 packet[0] = 0;
                 packet[1] = opcode;
                 protocol.readOrDir = false;
+                protocol.fileToReceive = new byte[0];
                 send(packet);
                 try {synchronized (protocol.keyboardLock) {protocol.keyboardLock.wait();}}
                 catch (InterruptedException e) {e.printStackTrace();}
